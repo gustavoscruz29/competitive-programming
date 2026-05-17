@@ -13,7 +13,7 @@ int main()
   int yes = 0;
   int i1 = 0, i2 = 0;
   REP(i,1,n){
-    if((int)s[i] < (int)s[i-1]){
+    if(s[i] < s[i-1]){
       yes = 1;
       i1 = i;
       i2 = i+1;

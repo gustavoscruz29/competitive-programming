@@ -75,6 +75,46 @@ int main()
   
   }
   
+}
+
+/*
+
+#include <bits/stdc++.h>
+#define REP(i,a,b) for(long long i = a; i < b; i++)
+#define fast_io ios_base::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
  
+using namespace std;
+
+ll teto(ll a, ll quo){
+  return (a + quo - 1) / quo;
+}
+ 
+int main()
+{
+  
+  int t; cin >> t;
+  
+  while(t--){
+  
+    ll a; cin >> a;
+    ll b; cin >> b;
+    ll ra = a; ll rb = b;
+    while(ra % 2 == 0) ra /= 2;
+    while(rb % 2 == 0) rb /= 2;
+    
+    if(ra != rb) cout << -1;
+    else{
+      a /= ra; b /= rb;
+      a = log2(a); b = log2(b);
+      ll ans = teto(abs(a-b), 3LL);
+      cout << ans;
+    }
+    
+    cout << "\n";
+  
+  }
   
 }
+
+*/

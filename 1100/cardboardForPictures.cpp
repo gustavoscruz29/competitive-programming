@@ -22,8 +22,7 @@ int main()
     ll n, c; cin >> n >> c;
     vector<ll> si(n);
     for(auto &e:si) cin >> e;
-    sort(si.begin(),si.end());
-    ll l = 0, r = (ll)sqrt(c - (si[n-1]*si[n-1]))/2;
+    ll l = 0, r = 1e9;
     ll w = 0, ans = -1;
     while(l <= r){
       w = l + (r - l) / 2;

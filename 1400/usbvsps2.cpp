@@ -81,3 +81,56 @@ int main()
   }
   
 }
+
+/*
+#include <bits/stdc++.h>
+#define REP(i,a,b) for(int i = a; i < b; i++)
+#define fast_io ios_base::sync_with_stdio(0);cin.tie(0);
+typedef long long ll;
+ 
+using namespace std;
+ 
+int main()
+{
+  fast_io;
+  int a, b, c; cin >> a >> b >> c;
+  int m; cin >> m;
+  ll total = 0, equipped = 0;
+  vector<pair<int,string>> geral(m);
+  REP(i,0,m){
+    cin >> geral[i].first;
+    cin >> geral[i].second;
+  }
+  sort(geral.begin(), geral.end());
+  
+  REP(i,0,m){
+    if(geral[i].second == "USB"){
+      if(a > 0){
+        total += geral[i].first;
+        equipped++;
+        a--;
+      }
+      else if(c > 0){
+        total += geral[i].first;
+        equipped++;
+        c--;
+      }
+    }
+    else{
+      if(b > 0){
+        total += geral[i].first;
+        equipped++;
+        b--;
+      }
+      else if(c > 0){
+        total += geral[i].first;
+        equipped++;
+        c--;
+      }
+    }
+  }
+  
+  cout << equipped << " " << total << "\n";
+  
+}
+*/

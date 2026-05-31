@@ -16,7 +16,7 @@ int main()
   ll t; cin >> t;
   while(t--){
     string s; cin >> s;
-    ll cont = 0, one = 0, zero = 0, maxSeq = 0;
+    ll cont = 0, one = 0, maxSeq = 0;
     REP(i,0,s.size()){
       if(s[i] == '0'){
         maxSeq = max(maxSeq, cont);
@@ -29,7 +29,6 @@ int main()
     }
     maxSeq = max(maxSeq, cont);
     if(one == s.size()) cout << one * one << "\n";
-    else if(zero == s.size()) cout << zero << "\n";
     else{
       ll maxSeq2 = 0, i = 0;
       while(s[i] == '1'){

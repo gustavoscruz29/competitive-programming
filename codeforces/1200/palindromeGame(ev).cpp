@@ -13,55 +13,13 @@ const int LIMIT = 1000000;
 void solve(){
   int n; cin >> n;
   string s; cin >> s;
-  int z = 0, o = 0;
-  REP(i,0,n){
+  int z = 0;
+  REP(i,0,n)
     if(s[i] == '0') z++;
-    else o++;
-  }
-  bool isPalindrome = true;
-  bool isReverse = false;
-  vector<ll> sum(2,0);
-  bool round = true;
-  if(o == n){
-    cout << "DRAW\n";
-    return;
-  }
-  while(o != n){
-    if(isPalindrome){
-      if(round) sum[0]++;
-      else sum[1]++;
-      if(z % 2 == 1)
-        isPalindrome = true;
-      else
-        isPalindrome = false;
-      z--, o++;
-      isReverse = false;
-    }
-    else if(isReverse){
-      if(round) sum[0]++;
-      else sum[1]++;
-      isPalindrome = true;
-      isReverse = false;
-      z--, o++;
-    }
-    else{
-      if(o != (n-1)){
-        if(round) sum[0]++;
-        else sum[1]++;
-        isPalindrome = true;
-        isReverse = false;
-        z--, o++;
-      }
-      else{
-        isReverse = true;
-        isPalindrome = false;
-      }
-    }
-    round = !round;
-  }
-  if(sum[0] > sum[1]) cout << "BOB\n";
-  else if(sum[0] < sum[1]) cout << "ALICE\n";
-  else cout << "DRAW\n";
+  if((z % 2 == 0) || z == 1)
+    cout << "BOB\n";
+  else
+    cout << "ALICE\n";
 }
  
 int main() {
